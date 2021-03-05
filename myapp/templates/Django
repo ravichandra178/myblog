@@ -115,5 +115,18 @@ _____________________
 specify requirements.txt
 DEBUG = False
 
+GIT
+------------------
+version control
+collaboration
+
+
+deployment
+----------
+aws,azure,digitalocean,hostinger ..
+
+pythonanywhere, heroku..
+
+
 
 Question & Answers

@@ -27,7 +27,7 @@ def detail(request,pk):
             obj.save()
             # process the data in form.cleaned_data as required
             # ...
-            # redirect to a new URL:
+            # redirect to a new URLcomment:
             return HttpResponseRedirect(reverse('myapp:detail',kwargs = {'pk':pk}))
 
     # if a GET (or any other method) we'll create a blank form
