@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="row">
+
+	<div class="col-6">
+		<h4>{{blog.title}}</h4>
+		<span id="like">{{blog.likes}}</span>&nbsp;&nbsp;<i class="fas fa-thumbs-up" onclick="Like()"></i>
+	
+	<script type="text/javascript">
+		function Like() {
+			var likes = document.getElementById('like').innerHTML
+			$.ajax({
+				url: "{% url 'myapp:like' %}",
+				data: {'blog_id':'{{blog.pk}}','likes':likes},
+				success: function(data){
+					document.getElementById('like').innerHTML = data.likes
+				}
+			})
+		}
+	</script>
+		<br>
+		{{blog.description|linebreaks}}
+		<br>
+		<img height="300" width="300" src="{{blog.image.url}}">
+		<br>
+	</div>
+	<div class="col-6">
+		<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    	{{ form.as_p }}
+    	<input type="submit" class="btn btn-success" value="Save">
+		</form>
+	</div>
+
+</div>
+<b>Comments:</b><br>
+{% for i in blog.comment_set.all %}
+
+<hr>{{i.comment|linebreaks}}<br>
+
+{% endfor %}
+
+{% endblock %}

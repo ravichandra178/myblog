@@ -1,0 +1,119 @@
+Django
+
+python package 
+
+MVT Architecture
+
+Models, Views, Templates
+
+Install virtual environment
+
+pip install virtualenv (install)
+
+virtualenv env1 (create)
+
+.\env1\Scripts\activate (activate)
+
+(env1) C:\Users\Name\Desktop\myproject> (u r in env)
+
+
+asgiref - async web server gateway interface
+
+pytz - pythn timezone
+
+sqlparse - models with db
+
+
+django-admin startproject mysite (start the website)
+
+python manage.py startapp myapp (start the app)
+
+Map URL for view
+
+1. include the urls in urlpattern
+2. add appname to INSTALLED_APPS in settings.py
+\
+
+Boiler Plate
+
+Bootstrap
+
+
+Create
+Retrieve/Read
+Update
+Delete
+
+ORM
+ForeignKey
+One To Many
+Many To One
+One To One
+Many To Many
+
+
+blog - one
+comments - many
+
+user - profile onetoone
+one - one
+
+book  -  author manytomany
+many - many
+
+blog - (FK)comments onetomany
+one- many
+comments(FK) - blog manytoone
+many - one
+
+Reverse Query
+
+NameError: something is not defined
+
+FBV - function based view
+CBV - class based view
+
+Display Views
+-----------------
+ListView
+DetailView
+
+
+Editing Views
+---------------
+CreateView
+
+UpdateView
+
+DeleteView
+
+
+
+[batteries-included]
+
+django forms
+
+php - codeigniter,laravel
+ruby - ruby on rails
+java -Spring
+python - django,flask
+
+
+ModelForms
+
+
+AJAX (Async jAVASCRIPT AND xML)
+
+url:
+data:
+success:
+
+gITHUB
+
+DEPLOY IT
+_____________________
+specify requirements.txt
+DEBUG = False
+
+
+Question & Answers
